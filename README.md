@@ -23,6 +23,6 @@ He diseñado este portafolio usando HTML, CSS vanila y JavaScript. He usado una 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="/assets/img/imgr1.jpeg">
-  <source media="(prefers-color-scheme: light)" srcset="/assets/img/imgr1.jpeg">
-  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+  <source media="(prefers-color-scheme: light)" srcset="/assets/img/imgr2.jpeg">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="/assets/img/imgr3.jpeg">
 </picture>
