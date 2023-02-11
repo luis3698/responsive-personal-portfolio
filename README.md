@@ -4,9 +4,10 @@
 
 Este es mi portafolio creado con HTML, CSS vanila y JavaScript. Esta página muestra algunos de los proyectos en los que he trabajado y mi experiencia profesional.💻🔥🚀
 
-<source media="(prefers-color-scheme: dark)" srcset="/assets/img/imgr1.jpeg">
-
-<source media="(prefers-color-scheme: light)" srcset="/assets/img/imgr2.jpeg">
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/img/imgr1.jpeg">
+    <source media="(prefers-color-scheme: light)" srcset="/assets/img/imgr2.jpeg">
+</picture>
 
 ## Herramientas
 
@@ -16,9 +17,10 @@ HTML (HyperText Markup Language) is the standard markup language for creating we
 
 CSS is used with HTML to style a web page: colors, fonts, margins, element sizes, etc. CSS is also used to create more advanced web page layouts such as grid layouts, layer layouts, responsive layouts, etc.
 
-<source media="(prefers-color-scheme: dark)" srcset="/assets/img/css-logo.vsg">
-
-<source media="(prefers-color-scheme: light)" srcset="/assets/img/html-logo.svg">
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/img/css-logo.vsg">
+    <source media="(prefers-color-scheme: light)" srcset="/assets/img/html-logo.svg">
+</picture>
 
 ## Contenido
 
