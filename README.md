@@ -18,11 +18,8 @@ HTML (HyperText Markup Language) is the standard markup language for creating we
 
 CSS is used with HTML to style a web page: colors, fonts, margins, element sizes, etc. CSS is also used to create more advanced web page layouts such as grid layouts, layer layouts, responsive layouts, etc.
 
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/assets/img/css-logo.vsg">
-    <source media="(prefers-color-scheme: light)" srcset="/assets/img/html-logo.svg">
-    <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
-</picture>
+![This is an image](/assets/img/css-logo.svg)
+![This is an image](/assets/img/html-logo.svg)
 
 ## Contenido
 
@@ -40,4 +37,3 @@ He diseñado este portafolio usando HTML, CSS vanila y JavaScript. He usado una 
 🤝 Si desea saber más sobre mí y mi trabajo, puede ponerse en contacto conmigo a través de mi página de contacto.
 
 ¡Gracias por visitar mi portafolio! 🙌
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
