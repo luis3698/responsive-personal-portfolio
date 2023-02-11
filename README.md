@@ -40,3 +40,4 @@ He diseñado este portafolio usando HTML, CSS vanila y JavaScript. He usado una 
 🤝 Si desea saber más sobre mí y mi trabajo, puede ponerse en contacto conmigo a través de mi página de contacto.
 
 ¡Gracias por visitar mi portafolio! 🙌
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
