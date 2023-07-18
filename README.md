@@ -2,7 +2,11 @@
 
 ¡Bienvenido a mi proyecto de portafolio! Este es un sitio web creado con HTML, CSS y JavaScript que muestra algunos de los proyectos en los que he trabajado y mi experiencia profesional. 
 
-![Light Mode](/ruta/a/la/imagen.png) ![Dark Mode](/ruta/a/la/imagen.png)
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/img/imgr1.jpeg">
+    <source media="(prefers-color-scheme: light)" srcset="/assets/img/imgr2.jpeg">
+    <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+</picture>
 
 ## Herramientas
 
@@ -33,11 +37,7 @@ Si deseas obtener más información sobre mí y mi trabajo, puedes poner en cont
 ¡Gracias por visitar mi portafolio! 🙌
 
 
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/assets/img/imgr1.jpeg">
-    <source media="(prefers-color-scheme: light)" srcset="/assets/img/imgr2.jpeg">
-    <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
-</picture>
+
 
 ## Herramientas
 
