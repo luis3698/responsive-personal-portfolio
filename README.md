@@ -1,8 +1,37 @@
-# 🌟 Bienvenido a mi proyecto! 🌟
+# Proyecto Portafolio
 
-## 📝proyecto portafolio
+¡Bienvenido a mi proyecto de portafolio! Este es un sitio web creado con HTML, CSS y JavaScript que muestra algunos de los proyectos en los que he trabajado y mi experiencia profesional. 
 
-Este es mi portafolio creado con HTML, CSS vanila y JavaScript. Esta página muestra algunos de los proyectos en los que he trabajado y mi experiencia profesional.💻🔥🚀
+![Light Mode](/ruta/a/la/imagen.png) ![Dark Mode](/ruta/a/la/imagen.png)
+
+## Herramientas
+
+- **CSS (Cascading Style Sheets):** CSS es un lenguaje de hojas de estilo utilizado para describir la presentación de un documento HTML. Se utiliza para definir los colores, fuentes, márgenes y otros estilos visuales de la página web.
+
+- **HTML (HyperText Markup Language):** HTML es el lenguaje de marcado estándar para crear páginas web. Se utiliza para estructurar y organizar el contenido de la página, como texto, imágenes, videos y más.
+
+- **JavaScript:** JavaScript es un lenguaje de programación que se utiliza para agregar interactividad y funcionalidad dinámica a las páginas web. Con JavaScript, se pueden crear efectos visuales, manipular datos y responder a las acciones del usuario.
+
+## Contenido
+
+En mi portafolio encontrarás las siguientes secciones:
+
+- **Inicio:** Una página que me presenta y proporciona información sobre mi trabajo.
+
+- **Proyectos:** Una página que muestra algunos de los proyectos en los que he trabajado. Cada proyecto incluye una descripción, capturas de pantalla y enlaces relevantes.
+
+- **Experiencia Profesional:** Una página que muestra una lista de mis trabajos anteriores y detalles sobre las responsabilidades y logros en cada uno.
+
+- **Contacto:** Una página con un formulario de contacto para que los posibles empleadores y clientes puedan ponerse en contacto conmigo.
+
+## Diseño
+
+He diseñado este portafolio utilizando HTML, CSS y JavaScript. Me he enfocado en mantener una estructura sencilla y una buena experiencia de usuario. Espero que disfrutes explorando mi portafolio.
+
+Si deseas obtener más información sobre mí y mi trabajo, puedes poner en contacto conmigo a través de la página de contacto.
+
+¡Gracias por visitar mi portafolio! 🙌
+
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/assets/img/imgr1.jpeg">
