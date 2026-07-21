@@ -63,14 +63,16 @@ const counterSection = document.querySelector(".counter");
 const counters = document.querySelectorAll(".counter__number");
 let started = false;
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY >= counterSection.offsetTop - 400) {
-    if (!started) {
-      counters.forEach((counter) => startCounter(counter));
+if (counterSection) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= counterSection.offsetTop - 400) {
+      if (!started) {
+        counters.forEach((counter) => startCounter(counter));
+      }
+      started = true;
     }
-    started = true;
-  }
-});
+  });
+}
 
 // Testimonial Swiper
 
@@ -157,10 +159,182 @@ sr.reveal(".home__img, .about__content, .service__info, .contact__form", {
 });
 
 sr.reveal(
-  ".skills__wrapper, .counter__wrapper, .portfolio__wrapper, .testimonial__wrapper, .blog__wrapper, .footer__content",
+  ".skills__wrapper, .counter__wrapper, .portfolio__wrapper, .testimonial__wrapper, .blog__wrapper, .footer__content, .experience__item, .education__card",
   {
     origin: "bottom",
+    interval: 100,
   }
 );
+
+/*=============== PDF VIEWER MODAL (ver, no descargar) ===============*/
+const pdfModal = document.getElementById("pdf-modal");
+
+if (pdfModal && window.pdfjsLib) {
+  // El worker se sirve desde el mismo CDN que la librería
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+  const pdfTitle = document.getElementById("pdf-modal-title");
+  const pdfBody = document.getElementById("pdf-modal-body");
+  const pdfPages = document.getElementById("pdf-modal-pages");
+  const pdfLoader = document.getElementById("pdf-modal-loader");
+  const pdfError = document.getElementById("pdf-modal-error");
+
+  let currentTask = null; // tarea de carga de pdf.js en curso
+  let renderToken = 0; // evita que un documento anterior pinte sobre el nuevo
+  let onScroll = null; // handler de scroll activo (lazy render)
+
+  const renderPdf = async (src, token) => {
+    try {
+      currentTask = pdfjsLib.getDocument(src);
+      const doc = await currentTask.promise;
+      if (token !== renderToken) return; // se abrió otro documento entre tanto
+
+      // Escala según el ancho disponible; nítido en pantallas de alta densidad
+      const available = pdfBody.clientWidth - 32;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const first = await doc.getPage(1);
+      if (token !== renderToken) return;
+      const base = first.getViewport({ scale: 1 });
+      const scale = Math.min(available / base.width, 1.6);
+      const ratio = base.height / base.width; // proporción para dimensionar placeholders
+
+      pdfLoader.hidden = true;
+
+      // Un placeholder por página; se pinta solo al acercarse al viewport (lazy)
+      for (let n = 1; n <= doc.numPages; n++) {
+        const holder = document.createElement("div");
+        holder.className = "pdf-modal__page";
+        holder.dataset.page = n;
+        holder.style.width = "100%";
+        holder.style.maxWidth = "80rem";
+        holder.style.aspectRatio = "1 / " + ratio;
+        pdfPages.appendChild(holder);
+      }
+
+      // Renderiza las páginas cuyo placeholder está cerca de la zona visible
+      const renderVisible = () => {
+        if (token !== renderToken) return;
+        const viewTop = -600;
+        const viewBottom = pdfBody.clientHeight + 600;
+        pdfPages
+          .querySelectorAll(".pdf-modal__page:not([data-rendered])")
+          .forEach((holder) => {
+            const box = holder.getBoundingClientRect();
+            const bodyBox = pdfBody.getBoundingClientRect();
+            const top = box.top - bodyBox.top;
+            if (top < viewBottom && top + box.height > viewTop) {
+              holder.setAttribute("data-rendered", "");
+              renderPage(doc, holder, scale, dpr, token);
+            }
+          });
+      };
+
+      let ticking = false;
+      onScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          ticking = false;
+          renderVisible();
+        });
+      };
+      pdfBody.addEventListener("scroll", onScroll);
+      window.addEventListener("resize", onScroll);
+      renderVisible(); // primeras páginas visibles
+    } catch (err) {
+      if (token !== renderToken) return;
+      pdfLoader.hidden = true;
+      pdfError.hidden = false;
+    }
+  };
+
+  const renderPage = async (doc, holder, scale, dpr, token) => {
+    try {
+      const page = await doc.getPage(Number(holder.dataset.page));
+      if (token !== renderToken || !holder.isConnected) return;
+      const viewport = page.getViewport({ scale: scale * dpr });
+      const canvas = document.createElement("canvas");
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      holder.style.aspectRatio = ""; // el canvas ya define el tamaño real
+      holder.appendChild(canvas);
+      await page.render({
+        canvasContext: canvas.getContext("2d"),
+        viewport,
+      }).promise;
+    } catch (err) {
+      holder.removeAttribute("data-rendered"); // permite reintentar
+    }
+  };
+
+  const stopLazy = () => {
+    if (onScroll) {
+      pdfBody.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      onScroll = null;
+    }
+  };
+
+  const openPdfModal = (src, title) => {
+    renderToken++;
+    stopLazy();
+    if (currentTask) {
+      currentTask.destroy();
+      currentTask = null;
+    }
+    pdfTitle.textContent = title || "Documento";
+    pdfPages.innerHTML = "";
+    pdfLoader.hidden = false;
+    pdfError.hidden = true;
+    pdfBody.scrollTop = 0;
+
+    pdfModal.classList.add("is-open");
+    pdfModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    renderPdf(src, renderToken);
+  };
+
+  const closePdfModal = () => {
+    renderToken++; // cancela cualquier render en curso
+    pdfModal.classList.remove("is-open");
+    pdfModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    stopLazy();
+    pdfPages.innerHTML = "";
+    if (currentTask) {
+      currentTask.destroy();
+      currentTask = null;
+    }
+  };
+
+  // Abrir el visor desde cualquier tarjeta/botón marcado con .js-pdf-view
+  document.querySelectorAll(".js-pdf-view").forEach((trigger) => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      const src = trigger.dataset.pdf || trigger.getAttribute("href");
+      if (!src) return;
+      const title =
+        trigger.dataset.title ||
+        trigger
+          .querySelector(".cert__title, .education__title")
+          ?.textContent.trim() ||
+        "Documento";
+      openPdfModal(src, title);
+    });
+  });
+
+  // Cerrar: botón X, clic en el fondo o tecla Escape
+  pdfModal.querySelectorAll("[data-pdf-close]").forEach((el) => {
+    el.addEventListener("click", closePdfModal);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && pdfModal.classList.contains("is-open")) {
+      closePdfModal();
+    }
+  });
+}
 
 

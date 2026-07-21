@@ -402,8 +402,8 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .home__img {
-    width: 28rem;
+  .home__img-wrapper {
+    width: 26rem;
   }
 }
 
@@ -423,6 +423,246 @@ body {
 
 .about__img {
   border-radius: var(--b-radius);
+}
+
+/* Profile photo frame (Home & About)
+--------------------------------------------------------------*/
+.home__role {
+  color: var(--color-primary);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-md);
+  margin-top: -1rem;
+  margin-bottom: 2.5rem;
+}
+
+.home__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.home__img-wrapper,
+.about__img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 32rem;
+  justify-self: center;
+  isolation: isolate;
+}
+
+.home__img-wrapper::before,
+.about__img-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translate(1.6rem, 1.6rem);
+  border-radius: 2rem;
+  background: var(--color-primary) var(--color-gradient);
+  z-index: -1;
+}
+
+.home__img,
+.about__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-secondary);
+  background-color: var(--color-white);
+}
+
+/* Experience (timeline)
+--------------------------------------------------------------*/
+.experience__wrapper {
+  max-width: 80rem;
+  margin-inline: auto;
+  position: relative;
+  display: grid;
+  gap: 3rem;
+}
+
+.experience__wrapper::before {
+  content: "";
+  position: absolute;
+  left: 2.4rem;
+  top: 1rem;
+  bottom: 1rem;
+  width: 2px;
+  background: var(--color-primary-lighten);
+}
+
+.experience__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.experience__dot {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary) var(--color-gradient);
+  color: var(--color-white);
+  font-size: 2rem;
+  z-index: 1;
+  box-shadow: 0 0 0 6px var(--color-gray-lighten);
+}
+
+.dark-theme .experience__dot {
+  box-shadow: 0 0 0 6px var(--color-secondary-dark);
+}
+
+.experience__card {
+  background-color: var(--color-white);
+  border-radius: var(--b-radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-primary);
+  transition: var(--transition);
+}
+
+.experience__card:hover {
+  box-shadow: var(--shadow-secondary);
+  transform: translateY(-0.4rem);
+}
+
+.experience__date {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.experience__role {
+  font-size: var(--fs-lg);
+  margin-bottom: 0.3rem;
+}
+
+.experience__company {
+  display: block;
+  color: var(--color-gray);
+  font-weight: var(--fw-medium);
+  margin-bottom: 1.2rem;
+}
+
+.experience__list {
+  display: grid;
+  gap: 0.6rem;
+  color: var(--color-gray);
+}
+
+.experience__list li {
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: var(--fs-sm);
+}
+
+.experience__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+/* Education
+--------------------------------------------------------------*/
+.education__wrapper {
+  grid-template-columns: 1fr;
+}
+
+.education__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: var(--b-radius);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-primary);
+  transition: var(--transition);
+}
+
+.education__card:hover {
+  box-shadow: var(--shadow-secondary);
+  transform: translateY(-0.5rem);
+}
+
+.education__view {
+  margin-top: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-primary);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-sm);
+}
+
+.education__place {
+  flex: 1;
+}
+
+.dark-theme .education__card {
+  background-color: var(--color-secondary);
+  box-shadow: none;
+}
+
+.dark-theme .education__title {
+  color: var(--color-white);
+}
+
+.education__icon {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  color: var(--color-white);
+  background: var(--color-primary) var(--color-gradient);
+}
+
+.education__title {
+  font-size: var(--fs-md);
+  margin-bottom: 0.6rem;
+}
+
+.education__place {
+  color: var(--color-gray);
+  font-weight: var(--fw-medium);
+}
+
+.education__languages {
+  text-align: center;
+  margin-top: 3rem;
+  color: var(--color-gray);
+}
+
+.education__languages i {
+  color: var(--color-primary);
 }
 
 /* Skills
@@ -732,6 +972,71 @@ body {
   background-color: var(--color-primary);
 }
 
+/* Certification cards */
+.cert__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  width: 30rem;
+  max-width: 85vw;
+  height: auto;
+  background-color: var(--color-white);
+  border-radius: var(--b-radius);
+  box-shadow: var(--shadow-primary);
+  padding: 2.5rem;
+  transition: var(--transition);
+}
+
+.cert__card:hover {
+  box-shadow: var(--shadow-secondary);
+  transform: translateY(-0.4rem);
+}
+
+.cert__icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  color: var(--color-white);
+  background: var(--color-primary) var(--color-gradient);
+  margin-bottom: 0.8rem;
+}
+
+.cert__title {
+  font-size: var(--fs-md);
+  color: var(--color-title);
+}
+
+.cert__meta {
+  color: var(--color-gray);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+}
+
+.cert__view {
+  margin-top: auto;
+  padding-top: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-primary);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-sm);
+}
+
+.dark-theme .cert__card {
+  background-color: var(--color-secondary);
+  box-shadow: none;
+}
+
+.dark-theme .cert__title {
+  color: var(--color-white);
+}
+
 /* Blog
 --------------------------------------------------------------*/
 .blog__post {
@@ -1015,12 +1320,16 @@ body {
     text-align: initial;
   }
 
-  .about__img {
+  .about__img-wrapper {
     order: -1;
   }
 
   .skills__wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .education__wrapper {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .counter__wrapper {
@@ -1112,5 +1421,198 @@ body {
 
   .blog__wrapper {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Portfolio "Ver manual" button
+--------------------------------------------------------------*/
+.portfolio__manual {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.6rem;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--b-radius);
+  background-color: var(--color-white);
+  color: var(--color-title);
+  font-family: inherit;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  transition: var(--transition);
+}
+
+.portfolio__manual i {
+  font-size: 1.8rem;
+}
+
+.portfolio__manual:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* PDF Viewer Modal
+--------------------------------------------------------------*/
+.pdf-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.pdf-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.pdf-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+}
+
+.pdf-modal__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 90rem;
+  height: 90vh;
+  background-color: var(--color-white);
+  border-radius: var(--b-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-secondary);
+  transform: translateY(2rem);
+  transition: var(--transition);
+}
+
+.pdf-modal.is-open .pdf-modal__content {
+  transform: translateY(0);
+}
+
+.pdf-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.6rem 2rem;
+  background: var(--color-primary) var(--color-gradient);
+}
+
+.pdf-modal__title {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--color-white);
+  margin: 0;
+}
+
+.pdf-modal__close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  font-size: 2.4rem;
+  transition: var(--transition);
+}
+
+.pdf-modal__close:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.pdf-modal__body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #525659;
+  padding: 1.6rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pdf-modal__pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.pdf-modal__page {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 0.4rem;
+}
+
+.pdf-modal__pages canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.pdf-modal__state {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color-white);
+  font-size: var(--fs-sm);
+  text-align: center;
+  padding: 2rem;
+}
+
+.pdf-modal__state[hidden] {
+  display: none;
+}
+
+.pdf-modal__state--error i {
+  font-size: 2rem;
+}
+
+.pdf-modal__spinner {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0.3rem solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation: pdf-spin 0.8s linear infinite;
+}
+
+@keyframes pdf-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dark-theme .pdf-modal__content {
+  background-color: var(--color-secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .pdf-modal {
+    padding: 0;
+  }
+
+  .pdf-modal__content {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 0;
   }
 }

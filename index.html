@@ -5,10 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== SEO ========================-->
+    <meta name="description"
+        content="Luis Gerardo Mancilla — Ingeniero de Sistemas y Tecnólogo en Análisis y Desarrollo de Sistemas de Información. Desarrollo web, soporte técnico, administración de redes y bases de datos.">
+    <meta name="author" content="Luis Gerardo Mancilla Gamboa">
+    <meta name="keywords"
+        content="Ingeniero de Sistemas, Desarrollador Web, Vue.js, JavaScript, Python, Soporte TI, San Gil, Colombia">
+
+    <!--==================== Open Graph ========================-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Luis Gerardo Mancilla — Ingeniero de Sistemas">
+    <meta property="og:description"
+        content="Portafolio profesional: desarrollo web, soporte técnico, administración de redes y bases de datos.">
+    <meta property="og:image" content="assets/img/profile.jpg">
+
     <!--==================== Favicon ========================-->
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
-    <title>Luis Mancilla</title>
+    <title>Luis Gerardo Mancilla — Ingeniero de Sistemas</title>
 
     <!--=================== Google Fonts ====================-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!--=================== Remixicons ====================-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!--=================== SwiperJS CSS ====================-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -43,6 +58,11 @@
                             <i class="ri-user-line nav__icon"></i>
                             Acerca de
                         </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#experience" class="nav__link">
+                            <i class="ri-briefcase-4-line nav__icon"></i>
+                            Experiencia</a>
                     </li>
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">
@@ -84,40 +104,54 @@
             <div class="d-grid home__wrapper container">
                 <div class="home__content">
                     <h1 class="home__title">
-                        Soy <span class="home__name"><Label>Luis Mancilla</Label></span><br>
-                        desarrollador web
-
-                        
+                        Soy <span class="home__name">Luis Gerardo Mancilla</span><br>
+                        Ingeniero de Sistemas
                     </h1>
+                    <p class="home__role">Desarrollo Web · Soporte TI · Bases de Datos</p>
                     <p class="home__description">
-                        Hola a todos, mi nombre es Luis Gerardo Mancilla y soy un desarrollador de software colombiano.
+                        Ingeniero de Sistemas y Tecnólogo en Análisis y Desarrollo de Sistemas de Información, con
+                        experiencia en desarrollo web, soporte técnico, administración de redes y manejo de bases de
+                        datos. Enfocado en construir soluciones eficientes y optimizar procesos.
                     </p>
-                    <a href="#contact" class="btn btn--primary">
-                        <i class="ri-mail-line"></i>
-                        Contactame
-                    </a>
+                    <div class="home__buttons">
+                        <a href="#contact" class="btn btn--primary">
+                            <i class="ri-mail-line"></i>
+                            Contáctame
+                        </a>
+                        <a href="assets/documents/CV-Luis-Gerardo-Mancilla.pdf" target="_blank" class="btn btn--outline">
+                            <i class="ri-article-line"></i>
+                            Descargar CV
+                        </a>
+                    </div>
                     <div class="social">
                         <span class="social__title">Sígueme</span>
                         <ul class="social__list">
                             <li class="social__item">
-                                <a href="https://www.facebook.com/61550041767314" target="_blank" class="social__link">
-                                    <i class="ri-facebook-fill"></i>
+                                <a href="https://www.linkedin.com/in/luis-gerardo-mancilla-gamboa-750327374/" target="_blank" class="social__link" aria-label="LinkedIn">
+                                    <i class="ri-linkedin-fill"></i>
                                 </a>
                             </li>
                             <li class="social__item">
-                                <a href="https://www.instagram.com/luis_3698m/" target="_blank" class="social__link">
+                                <a href="https://github.com/luis3698" target="_blank" class="social__link" aria-label="GitHub">
+                                    <i class="ri-github-fill"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="https://www.instagram.com/luis_3698m/" target="_blank" class="social__link" aria-label="Instagram">
                                     <i class="ri-instagram-line"></i>
                                 </a>
                             </li>
                             <li class="social__item">
-                                <a href="https://www.linkedin.com/in/luis-m-33969a190/" target="_blank" class="social__link">
-                                    <i class="ri-linkedin-line"></i>
+                                <a href="https://www.facebook.com/61550041767314" target="_blank" class="social__link" aria-label="Facebook">
+                                    <i class="ri-facebook-fill"></i>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <img src="assets/img/home.png" alt="Luis Mancilla" class="home__img">
+                <div class="home__img-wrapper">
+                    <img src="assets/img/profile.jpg" alt="Luis Gerardo Mancilla, Ingeniero de Sistemas" class="home__img">
+                </div>
             </div>
         </section>
 
@@ -125,16 +159,99 @@
         <section id="about" class="about section">
             <div class="d-grid about__wrapper container">
                 <div class="about__content">
-                    <span class="section__subtitle">Acerca de mi</span>
-                    <h2 class="section__title">Tecnólogo en Análisis y Desarrollo de Sistemas de Información
+                    <span class="section__subtitle">Acerca de mí</span>
+                    <h2 class="section__title">Ingeniero de Sistemas y Tecnólogo en Análisis y Desarrollo de Sistemas
                     </h2>
                     <p class="about__description">
-                        Soy un desarrollador web experto que se dedica a crear experiencias 
-                        en línea fluidas. Soy experto en varios aspectos del desarrollo web 
-                        y me especializo en crear interfaces intuitivas y fáciles de usar.</p>
-                    <a href="/assets/documents/Hoja de Vida luis mancilla 2025.pdf" class="btn btn--primary"><i class="ri-article-line"></i>Descarga CV</a>
+                        Cuento con conocimientos en desarrollo de aplicaciones web, mantenimiento preventivo y
+                        correctivo de equipos, sistematización de información y optimización de procesos
+                        administrativos. Poseo habilidades para la resolución de problemas, el trabajo en equipo y la
+                        adaptación a diferentes entornos tecnológicos.
+                    </p>
+                    <p class="about__description">
+                        Me enfoco en aportar soluciones eficientes, mejorar procesos y fortalecer continuamente mis
+                        competencias profesionales en el área de sistemas y desarrollo de software.
+                    </p>
+                    <a href="assets/documents/CV-Luis-Gerardo-Mancilla.pdf" target="_blank" class="btn btn--primary"><i class="ri-article-line"></i>Descargar CV</a>
                 </div>
-                <img src="assets/img/about.png" alt="Luis Mancilla" class="about__img">
+                <div class="about__img-wrapper">
+                    <img src="assets/img/profile.jpg" alt="Luis Gerardo Mancilla" class="about__img">
+                </div>
+            </div>
+        </section>
+
+        <!--===================== Experience =====================-->
+        <section id="experience" class="experience section section-bg">
+            <div class="section__header container">
+                <span class="section__subtitle">Trayectoria</span>
+                <h2 class="section__title">Experiencia profesional</h2>
+            </div>
+            <div class="experience__wrapper container">
+                <div class="experience__item">
+                    <div class="experience__dot"><i class="ri-briefcase-4-fill"></i></div>
+                    <div class="experience__card">
+                        <span class="experience__date">Enero 2024 – Actualidad</span>
+                        <h3 class="experience__role">Analista de Datos y Sistematizador</h3>
+                        <span class="experience__company">Secretaría de Tránsito</span>
+                        <ul class="experience__list">
+                            <li>Sistematización y organización de información administrativa.</li>
+                            <li>Soporte técnico preventivo y correctivo a equipos de cómputo.</li>
+                            <li>Actualización y gestión de bases de datos, y optimización de procesos internos.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience__item">
+                    <div class="experience__dot"><i class="ri-code-s-slash-fill"></i></div>
+                    <div class="experience__card">
+                        <span class="experience__date">Enero 2023 – Diciembre 2023</span>
+                        <h3 class="experience__role">Programador Web Freelance</h3>
+                        <span class="experience__company">Independiente</span>
+                        <ul class="experience__list">
+                            <li>Desarrollo de aplicaciones web personalizadas según requerimientos del cliente.</li>
+                            <li>Optimización y mantenimiento de código fuente.</li>
+                            <li>Diseño y mejora de interfaces web responsivas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience__item">
+                    <div class="experience__dot"><i class="ri-store-2-fill"></i></div>
+                    <div class="experience__card">
+                        <span class="experience__date">Agosto 2020 – Julio 2021</span>
+                        <h3 class="experience__role">Auxiliar en Compra y Venta</h3>
+                        <span class="experience__company">British American Tobacco</span>
+                        <ul class="experience__list">
+                            <li>Gestión y control de inventarios con software empresarial.</li>
+                            <li>Apoyo técnico en procesos administrativos y tecnológicos.</li>
+                            <li>Organización y control de información comercial.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience__item">
+                    <div class="experience__dot"><i class="ri-layout-4-fill"></i></div>
+                    <div class="experience__card">
+                        <span class="experience__date">Enero 2019 – Diciembre 2019</span>
+                        <h3 class="experience__role">Programador Front-End</h3>
+                        <span class="experience__company">Tecnoparque SENA</span>
+                        <ul class="experience__list">
+                            <li>Desarrollo de interfaces web dinámicas y responsivas.</li>
+                            <li>Elaboración de documentación técnica y manuales de usuario.</li>
+                            <li>Apoyo en pruebas y mejoras de aplicaciones web.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience__item">
+                    <div class="experience__dot"><i class="ri-tools-fill"></i></div>
+                    <div class="experience__card">
+                        <span class="experience__date">Enero 2017 – Diciembre 2017</span>
+                        <h3 class="experience__role">Técnico en Sistemas</h3>
+                        <span class="experience__company">INPEC / SENA</span>
+                        <ul class="experience__list">
+                            <li>Soporte técnico de hardware y software.</li>
+                            <li>Mantenimiento preventivo y correctivo de equipos.</li>
+                            <li>Configuración y mantenimiento básico de redes.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -152,68 +269,58 @@
                     <div class="skills__content-wrapper">
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/html-logo.svg" alt="HTML Logo" class="skills__img">
-                            </div>
-                            <h3 class="skills__name">HTML</h3>
-                        </div>
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/css-logo.svg" alt="CSS Logo" class="skills__img">
-                            </div>
-                            <h3 class="skills__name">CSS</h3>
-                        </div>
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img//javascript-logo.svg" alt="JavaScript Logo"
-                                    class="skills__img">
+                                <img src="assets/img/javascript-logo.svg" alt="JavaScript" class="skills__img">
                             </div>
                             <h3 class="skills__name">JavaScript</h3>
                         </div>
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/java-svgrepo-com.svg" alt="Photoshop Logo" class="skills__img">
-                            </div>
-                            <h3 class="skills__name">Java</h3>
-                        </div>
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/python-svgrepo-com.svg" alt="Python Logo" class="skills__img">
+                                <img src="assets/img/python-svgrepo-com.svg" alt="Python" class="skills__img">
                             </div>
                             <h3 class="skills__name">Python</h3>
                         </div>
-                        
+                        <div class="skills__card">
+                            <div class="skills__img-wrapper">
+                                <img src="assets/img/html-logo.svg" alt="HTML5" class="skills__img">
+                            </div>
+                            <h3 class="skills__name">HTML5</h3>
+                        </div>
+                        <div class="skills__card">
+                            <div class="skills__img-wrapper">
+                                <img src="assets/img/css-logo.svg" alt="CSS3" class="skills__img">
+                            </div>
+                            <h3 class="skills__name">CSS3</h3>
+                        </div>
                     </div>
                 </div>
 
                 <div class="skills__content">
-                    <h3 class="skills__title">Frameworks y Librarias</h3>
+                    <h3 class="skills__title">Frameworks y librerías</h3>
                     <div class="skills__content-wrapper">
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/vue-logo.svg" alt="Figma Logo" class="skills__img">
+                                <img src="assets/img/vue-logo.svg" alt="Vue.js" class="skills__img">
                             </div>
                             <h3 class="skills__name">Vue.js</h3>
                         </div>
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/next-dot-js-svgrepo-com.svg" alt="Adobe XD Logo" class="skills__img">
-                            </div>
-                            <h3 class="skills__name">Next.js</h3>
-                        </div>
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/nodejs-logo.svg" alt="Illustrator Logo"
-                                    class="skills__img">
+                                <img src="assets/img/nodejs-logo.svg" alt="Node.js" class="skills__img">
                             </div>
                             <h3 class="skills__name">Node.js</h3>
                         </div>
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/vuetify-logo.svg" alt="Photoshop Logo" class="skills__img">
+                                <img src="assets/img/bootstrap-logo.svg" alt="Bootstrap" class="skills__img">
                             </div>
-                            <h3 class="skills__name">Vuetify</h3>
+                            <h3 class="skills__name">Bootstrap</h3>
                         </div>
-                        
+                        <div class="skills__card">
+                            <div class="skills__img-wrapper">
+                                <img src="assets/img/firebase.svg" alt="Firebase" class="skills__img">
+                            </div>
+                            <h3 class="skills__name">Firebase</h3>
+                        </div>
                     </div>
                 </div>
 
@@ -222,116 +329,92 @@
                     <div class="skills__content-wrapper">
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/mysql-logo-svgrepo-com.svg" alt="My SQL Logo" class="skills__img">
+                                <img src="assets/img/mysql-logo-svgrepo-com.svg" alt="MySQL" class="skills__img">
                             </div>
-                            <h3 class="skills__name">My SQL</h3>
+                            <h3 class="skills__name">MySQL</h3>
                         </div>
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/firebase.svg" alt="Firebase Logo" class="skills__img">
+                                <img src="assets/img/mongodb.svg" alt="MongoDB" class="skills__img">
+                            </div>
+                            <h3 class="skills__name">MongoDB</h3>
+                        </div>
+                        <div class="skills__card">
+                            <div class="skills__img-wrapper">
+                                <img src="assets/img/sqlserver.svg" alt="SQL Server" class="skills__img">
+                            </div>
+                            <h3 class="skills__name">SQL Server</h3>
+                        </div>
+                        <div class="skills__card">
+                            <div class="skills__img-wrapper">
+                                <img src="assets/img/firebase.svg" alt="Firebase" class="skills__img">
                             </div>
                             <h3 class="skills__name">Firebase</h3>
                         </div>
-                       
-                        
                     </div>
                 </div>
 
                 <div class="skills__content">
-                    <h3 class="skills__title">Material-UI</h3>
+                    <h3 class="skills__title">Herramientas y entornos</h3>
                     <div class="skills__content-wrapper">
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/tailwindcss-icon-svgrepo-com.svg" alt="Figma Logo" class="skills__img">
+                                <img src="assets/img/git.svg" alt="Git" class="skills__img">
                             </div>
-                            <h3 class="skills__name">Tailwind CSS</h3>
+                            <h3 class="skills__name">Git</h3>
                         </div>
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/sass-svgrepo-com.svg" alt="Adobe XD Logo" class="skills__img">
-                            </div>
-                            <h3 class="skills__name">Sass</h3>
-                        </div>
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/bootstrap-logo.svg" alt="Illustrator Logo"
-                                    class="skills__img">
-                            </div>
-                            <h3 class="skills__name">Bootstrap</h3>
-                        </div>
-                       
-                    </div>
-                </div>
-
-                <div class="skills__content">
-                    <h3 class="skills__title">Herramientas y entornos de desarrollo</h3>
-                    <div class="skills__content-wrapper">
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/visual-studio-code-svgrepo-com.svg" alt="VSC Logo" class="skills__img">
-                            </div>
-                            <h3 class="skills__name">Visual Estudio Code</h3>
-                        </div>
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/photoshop-logo.svg" alt="Adobe XD Logo" class="skills__img">
-                            </div>
-                            <h3 class="skills__name">Adobe Photoshop</h3>
-                        </div>
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/adobe-illustrator-logo.svg" alt="Illustrator Logo"
-                                    class="skills__img">
-                            </div>
-                            <h3 class="skills__name">Adobe Illustrator</h3>
-                        </div>
-                        
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/docker-svgrepo-com.svg" alt="Docker Logo" class="skills__img">
-                            </div>
-                            <h3 class="skills__name">Docker</h3>
-                        </div>
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/github-svgrepo-com.svg" alt="Photoshop Logo" class="skills__img">
+                                <img src="assets/img/github-svgrepo-com.svg" alt="GitHub" class="skills__img">
                             </div>
                             <h3 class="skills__name">GitHub</h3>
                         </div>
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/postman-icon-svgrepo-com.svg" alt="Photoshop Logo" class="skills__img">
+                                <img src="assets/img/visual-studio-code-svgrepo-com.svg" alt="Visual Studio Code" class="skills__img">
                             </div>
-                            <h3 class="skills__name">Posman</h3>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="skills__content">
-                    <h3 class="skills__title">Otros</h3>
-                    <div class="skills__content-wrapper">
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/babel-svgrepo-com.svg" alt="HTML Logo" class="skills__img">
-                            </div>
-                            <h3 class="skills__name">Babel</h3>
+                            <h3 class="skills__name">VS Code</h3>
                         </div>
                         <div class="skills__card">
                             <div class="skills__img-wrapper">
-                                <img src="assets/img/webpack-svgrepo-com.svg" alt="CSS Logo" class="skills__img">
+                                <img src="assets/img/postman-icon-svgrepo-com.svg" alt="Postman" class="skills__img">
                             </div>
-                            <h3 class="skills__name">Webpack</h3>
-                        </div>
-                        <div class="skills__card">
-                            <div class="skills__img-wrapper">
-                                <img src="assets/img/vitejs-logo.svg" alt="JavaScript Logo" class="skills__img">
-                            </div>
-                            <h3 class="skills__name">Vite</h3>
+                            <h3 class="skills__name">Postman</h3>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!--===================== Education =====================-->
+        <section id="education" class="education section">
+            <div class="section__header container">
+                <span class="section__subtitle">Formación</span>
+                <h2 class="section__title">Educación</h2>
+            </div>
+            <div class="d-grid education__wrapper container">
+                <a href="assets/documents/diploma ingenieria de sistemas.pdf" class="education__card js-pdf-view">
+                    <div class="education__icon"><i class="ri-graduation-cap-fill"></i></div>
+                    <h3 class="education__title">Ingeniería de Sistemas</h3>
+                    <span class="education__place">Universidad Uniremington</span>
+                    <span class="education__view"><i class="ri-file-pdf-2-line"></i> Ver diploma</span>
+                </a>
+                <a href="assets/documents/diploma tecnologo.pdf" class="education__card js-pdf-view">
+                    <div class="education__icon"><i class="ri-computer-fill"></i></div>
+                    <h3 class="education__title">Tecnólogo en Análisis y Desarrollo de Sistemas de Información</h3>
+                    <span class="education__place">SENA</span>
+                    <span class="education__view"><i class="ri-file-pdf-2-line"></i> Ver diploma</span>
+                </a>
+                <a href="assets/documents/certificado tecnico en sistemas.pdf" class="education__card js-pdf-view">
+                    <div class="education__icon"><i class="ri-tools-fill"></i></div>
+                    <h3 class="education__title">Técnico en Sistemas</h3>
+                    <span class="education__place">SENA</span>
+                    <span class="education__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                </a>
+            </div>
+            <p class="education__languages container">
+                <i class="ri-translate-2"></i> Idiomas: <strong>Español</strong> (nativo) · <strong>Inglés</strong> (básico, A2)
+            </p>
         </section>
 
         <!--====================
@@ -401,10 +484,10 @@
                             <i class="ri-code-line"></i>
                         </div>
                         <div class="service__info-wrapper">
-                            <h3 class="service__info-title">Frontend Development</h3>
+                            <h3 class="service__info-title">Desarrollo Frontend</h3>
                             <p class="service__description">
                                 Diseño de sitios web de calidad, atractivos para los usuarios,
-                                 optimizados para motores de búsqueda y adaptados a diferentes 
+                                 optimizados para motores de búsqueda y adaptados a diferentes
                                  dispositivos.
                             </p>
                         </div>
@@ -427,12 +510,12 @@
                             <i class="ri-settings-5-line"></i>
                         </div>
                         <div class="service__info-wrapper">
-                            <h3 class="service__info-title">IT Support Analyst</h3>
+                            <h3 class="service__info-title">Soporte y Análisis TI</h3>
                             <p class="service__description">
-                                CTecnólogo en Análisis y Desarrollo de Sistemas de 
-                                Información con experiencia como IT Support Analyst, 
-                                especializado en brindar soporte técnico de primer y 
-                                segundo nivel 
+                                Tecnólogo en Análisis y Desarrollo de Sistemas de
+                                Información con experiencia en soporte técnico,
+                                especializado en brindar atención de primer y
+                                segundo nivel a usuarios y equipos.
                             </p>
                         </div>
                     </div>
@@ -462,74 +545,88 @@
             <div class="d-grid portfolio__wrapper container">
                 <div class="portfolio__project">
                     <div class="portfolio__overlay"></div>
-                    <img src="assets/img/project1.png" alt="Website Design" class="portfolio__img">
+                    <img src="assets/documents/manuales/SIGR.png" alt="SIGR - Sistema Integral de Gestión para Restaurantes" class="portfolio__img">
                     <div class="portfolio__info">
                         <div class="portfolio__info-wrapper">
-                            <h3 class="portfolio__title">Portfolio projec web</h3>
+                            <h3 class="portfolio__title">SIGR · Gestión para Restaurantes</h3>
                             <p class="portfolio__description">
-                                Creé una página web para un portafolio personal, destacando 
-                                proyectos anteriores, habilidades y experiencia en desarrollo. El diseño es moderno, responsivo y fácil de navegar
+                                Sistema integral para restaurantes con backoffice de administrador,
+                                comandero del mesero, KDS de cocina y barra, y punto de venta del cajero.
                             </p>
+                            <button type="button" class="portfolio__manual js-pdf-view"
+                                data-pdf="assets/documents/manuales/Manual_Funcionalidad_SIGR.pdf"
+                                data-title="Manual de Funcionalidad · SIGR">
+                                <i class="ri-book-open-line"></i> Ver manual
+                            </button>
                         </div>
                     </div>
-                    <a href="https://github.com/luis3698/responsive-personal-portfolio" target="_blank" class="portfolio__link">
-                        <i  class="ri-external-link-line"></i>
-                    </a>
-                </div>
-
-                <div class="portfolio__project">
-                    <div class="portfolio__overlay"></div>
-                    <img src="assets/img/project2.png" alt="Mobile App UI/UX Design " class="portfolio__img">
-                    <div class="portfolio__info">
-                        <div class="portfolio__info-wrapper">
-                            <h3 class="portfolio__title">Chef Book projec web</h3>
-                            <p class="portfolio__description">
-                                Desarrollé una página web para un restaurante de comida 
-                                rápida, con un diseño dinámico y fácil de usar. Incluye 
-                                un menú interactivo, opción de pedidos en línea, información 
-                                sobre ubicaciones, horarios de apertura y una sección de 
-                                contacto.
-                        </div>
-                    </div>
-                    <a href="https://github.com/luis3698/recetas-web-vue-vuetify" target="_blank" class="portfolio__link">
+                    <a href="https://github.com/luis3698" target="_blank" class="portfolio__link" aria-label="Ver en GitHub">
                         <i class="ri-external-link-line"></i>
                     </a>
                 </div>
 
                 <div class="portfolio__project">
                     <div class="portfolio__overlay"></div>
-                    <img src="assets/img/project3.jpg" alt="App Re-design" class="portfolio__img">
+                    <img src="assets/documents/manuales/GymManager Pro.png" alt="GymManager Pro - Sistema de gestión de gimnasios" class="portfolio__img">
                     <div class="portfolio__info">
                         <div class="portfolio__info-wrapper">
-                            <h3 class="portfolio__title">restaurant</h3>
+                            <h3 class="portfolio__title">GymManager Pro</h3>
                             <p class="portfolio__description">
-                                Desarrollé una página web para un restaurante con un diseño atractivo y 
-                                responsivo. Incluye un menú interactivo, galería de platos, reservas en 
-                                línea, mapa de localización y formulario de contacto, todo optimizado para 
-                                una experiencia de usuario fluida
+                                Sistema de gestión de gimnasios con roles de administrador, caja,
+                                entrenador y cliente: membresías, pagos y control de accesos.
                             </p>
+                            <button type="button" class="portfolio__manual js-pdf-view"
+                                data-pdf="assets/documents/manuales/Manual de Funcionalidad - GymManager Pro.pdf"
+                                data-title="Manual de Funcionalidad · GymManager Pro">
+                                <i class="ri-book-open-line"></i> Ver manual
+                            </button>
                         </div>
                     </div>
-                    <a href="javascript:void(0)" class="portfolio__link">
+                    <a href="https://github.com/luis3698" target="_blank" class="portfolio__link" aria-label="Ver en GitHub">
                         <i class="ri-external-link-line"></i>
                     </a>
                 </div>
 
                 <div class="portfolio__project">
                     <div class="portfolio__overlay"></div>
-                    <img src="assets/img/project4.png" alt="Recipe Social" class="portfolio__img">
+                    <img src="assets/documents/manuales/Golden Cat.png" alt="Golden Cat - Sistema de gestión hotelera" class="portfolio__img">
                     <div class="portfolio__info">
                         <div class="portfolio__info-wrapper">
-                            <h3 class="portfolio__title">Chef Social</h3>
+                            <h3 class="portfolio__title">Golden Cat · Gestión Hotelera</h3>
                             <p class="portfolio__description">
-                                Desarrollé una red social para compartir recetas culinarias, 
-                                donde los usuarios pueden subir, comentar y valorar recetas. 
-                                La plataforma tiene un diseño intuitivo y responsivo, con 
-                                opciones de búsqueda por ingredientes
+                                Hotel boutique con portal del huésped, área del cliente y panel de
+                                administración. Vue 2 + Vuetify y backend Express + Sequelize.
                             </p>
+                            <button type="button" class="portfolio__manual js-pdf-view"
+                                data-pdf="assets/documents/manuales/Manual_Funcionalidad_Golden_Cat.pdf"
+                                data-title="Manual de Funcionalidad · Golden Cat">
+                                <i class="ri-book-open-line"></i> Ver manual
+                            </button>
                         </div>
                     </div>
-                    <a href="javascript:void(0)" class="portfolio__link">
+                    <a href="https://github.com/luis3698" target="_blank" class="portfolio__link" aria-label="Ver en GitHub">
+                        <i class="ri-external-link-line"></i>
+                    </a>
+                </div>
+
+                <div class="portfolio__project">
+                    <div class="portfolio__overlay"></div>
+                    <img src="assets/documents/manuales/Publica Recetas.png" alt="Publica Recetas - Red social de recetas" class="portfolio__img">
+                    <div class="portfolio__info">
+                        <div class="portfolio__info-wrapper">
+                            <h3 class="portfolio__title">Publica Recetas</h3>
+                            <p class="portfolio__description">
+                                Red social de recetas con Vue 3, Express y SQLite: publicación de recetas,
+                                me gusta, comentarios, favoritos y perfiles públicos.
+                            </p>
+                            <button type="button" class="portfolio__manual js-pdf-view"
+                                data-pdf="assets/documents/manuales/Manual-Funcionalidad-PublicaRecetas.pdf"
+                                data-title="Manual de Funcionalidad · Publica Recetas">
+                                <i class="ri-book-open-line"></i> Ver manual
+                            </button>
+                        </div>
+                    </div>
+                    <a href="https://github.com/luis3698" target="_blank" class="portfolio__link" aria-label="Ver en GitHub">
                         <i class="ri-external-link-line"></i>
                     </a>
                 </div>
@@ -539,99 +636,82 @@
         <!--===================== certifications =====================-->
         <section class="testimonial section section-bg">
             <div class="section__header container">
-                <span class="section__subtitle">Titulos</span>
-                <h2 class="section__title">mi certificaciónes</h2>
+                <span class="section__subtitle">Títulos</span>
+                <h2 class="section__title">Mis certificaciones</h2>
             </div>
             <div class="testimonial__wrapper container swiper">
                 <div class="swiper-wrapper">
-                    <!-- <div class="testimonial__card swiper-slide">
-                       <div class="testimonial__card-icon">
-                            <i class="ri-double-quotes-r"></i>
-                        </div>
-                        <div class="testimonial__card-wrapper">
-                            <div class="testimonial__img-wrapper">
-                                <img src="assets/img/testimonial1.jpg" alt="Shawn Wallace" class="testimonial__img">
-                            </div>
-                            <div class="testimonial__data">
-                                <h3 class="testimonial__name">Shawn Wallace</h3>
-                                <p class="testimonial__occupation">Photographer</p>
-                            </div>
-                        </div>
-                        <p class="testimonial__quote">
-                            In ultricies at purus egestas at donec amet gravida nunc. Mauris pellentesque ipsum proin
-                            placerat aliquam libero arcu.
-                        </p>
-                    </div> 
 
-                    <div class="testimonial__card swiper-slide">
-                        <div class="testimonial__card-icon">
-                            <i class="ri-double-quotes-r"></i>
-                        </div>
-                        <div class="testimonial__card-wrapper">
-                            <div class="testimonial__img-wrapper">
-                                <img src="assets/img/testimonial2.jpg" alt="Shawn Wallace" class="testimonial__img">
-                            </div>
-                            <div class="testimonial__data">
-                                <h3 class="testimonial__name">Ashley Robie</h3>
-                                <p class="testimonial__occupation">Product Manager</p>
-                            </div>
-                        </div>
-                        <p class="testimonial__quote">
-                            In ultricies at purus egestas at donec amet gravida nunc. Mauris pellentesque ipsum proin
-                            placerat aliquam libero arcu.
-                        </p>
-                    </div> -->
+                    <a href="assets/documents/Certificado Bootcamp Programación.pdf" class="cert__card swiper-slide js-pdf-view">
+                        <div class="cert__icon"><i class="ri-code-box-fill"></i></div>
+                        <h3 class="cert__title">Bootcamp de Programación</h3>
+                        <span class="cert__meta">MinTIC &amp; ANDES · 2024</span>
+                        <span class="cert__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                    </a>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/documents/certificadoTransformación digital para el empleo.jpg" class="testimonial__quote">   
-                    </img>
-                    </div>
+                    <a href="assets/documents/certificado Vue js 3 udemy.pdf" class="cert__card swiper-slide js-pdf-view">
+                        <div class="cert__icon"><i class="ri-vuejs-fill"></i></div>
+                        <h3 class="cert__title">Vue.js 3 + MEVN</h3>
+                        <span class="cert__meta">Udemy · 2023</span>
+                        <span class="cert__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                    </a>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/documents/certificadoVuejs3udemy_page.jpg" class="testimonial__quote">     
-                    </img>
-                    </div>
+                    <a href="assets/documents/Luis Gerardo Mancilla Gamboa - Curso - Alura.pdf" class="cert__card swiper-slide js-pdf-view">
+                        <div class="cert__icon"><i class="ri-terminal-box-fill"></i></div>
+                        <h3 class="cert__title">Lógica de Programación</h3>
+                        <span class="cert__meta">Alura · 2022</span>
+                        <span class="cert__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                    </a>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/documents/certificadobasico-programacion.jpg" class="testimonial__quote">
-                         </img>
-                    </div>
+                    <a href="assets/documents/certificado CURSO DE TESTING DE SOFTWARE QA – BÁSICO .pdf" class="cert__card swiper-slide js-pdf-view">
+                        <div class="cert__icon"><i class="ri-bug-fill"></i></div>
+                        <h3 class="cert__title">Testing de Software QA</h3>
+                        <span class="cert__meta">Academia QA · 2022</span>
+                        <span class="cert__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                    </a>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/documents/certificadoSQA.jpg" class="testimonial__quote"> 
-                    </img>
-                    </div>
+                    <a href="assets/documents/certificado sqa cemillero.pdf" class="cert__card swiper-slide js-pdf-view">
+                        <div class="cert__icon"><i class="ri-checkbox-multiple-fill"></i></div>
+                        <h3 class="cert__title">Pruebas Automatizadas (SQA)</h3>
+                        <span class="cert__meta">Semillero SQA · 2021</span>
+                        <span class="cert__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                    </a>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/documents/Certificado - Lógica de programación parte 1_ Primeros pasos.jpg" class="testimonial__quote"> 
-                    </img>
-                    </div>
+                    <a href="assets/documents/certificadoTransformación digital para el empleo.pdf" class="cert__card swiper-slide js-pdf-view">
+                        <div class="cert__icon"><i class="ri-global-fill"></i></div>
+                        <h3 class="cert__title">Transformación Digital</h3>
+                        <span class="cert__meta">Google Activate · 2022</span>
+                        <span class="cert__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                    </a>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/documents/certificado tecnico en sistemas.jpg" class="testimonial__quote"> 
-                    </img>
-                    </div>
+                    <a href="assets/documents/certificado Digitaliza paso a paso tu negocio con herramientas de Google.pdf" class="cert__card swiper-slide js-pdf-view">
+                        <div class="cert__icon"><i class="ri-line-chart-fill"></i></div>
+                        <h3 class="cert__title">Analytics y Marketing Digital</h3>
+                        <span class="cert__meta">Google</span>
+                        <span class="cert__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                    </a>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/documents/COMUNICACION EN FRANCES PARA SITUACIONES COTIDIANAS.jpg" class="testimonial__quote"> 
-                    </img>
-                    </div>
+                    <a href="assets/documents/MARKETING DIGITAL.pdf" class="cert__card swiper-slide js-pdf-view">
+                        <div class="cert__icon"><i class="ri-megaphone-fill"></i></div>
+                        <h3 class="cert__title">Marketing Digital</h3>
+                        <span class="cert__meta">SENA · 2020</span>
+                        <span class="cert__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                    </a>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/documents/MARKETING DIGITAL.jpg" class="testimonial__quote"> 
-                    </img>
-                    </div>
+                    <a href="assets/documents/INGLES PRE INTERMEDIO - NIVEL 1.pdf" class="cert__card swiper-slide js-pdf-view">
+                        <div class="cert__icon"><i class="ri-translate-2"></i></div>
+                        <h3 class="cert__title">Inglés (Niveles 1 al 4)</h3>
+                        <span class="cert__meta">SENA · 2022</span>
+                        <span class="cert__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                    </a>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/documents/Certificado Bootcamp Programación.jpg" class="testimonial__quote"> 
-                    </img>
-                    </div>
+                    <a href="assets/documents/COMUNICACION EN FRANCES PARA SITUACIONES COTIDIANAS.pdf" class="cert__card swiper-slide js-pdf-view">
+                        <div class="cert__icon"><i class="ri-chat-voice-fill"></i></div>
+                        <h3 class="cert__title">Comunicación en Francés</h3>
+                        <span class="cert__meta">SENA · 2017</span>
+                        <span class="cert__view"><i class="ri-file-pdf-2-line"></i> Ver certificado</span>
+                    </a>
 
-                    <div class="testimonial__card swiper-slide">
-                        <img src="/assets/documents/diploma tecnologo.jpg" class="testimonial__quote"> 
-                    </img>
-                    </div>
-                    
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -735,7 +815,7 @@
                     
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#contact">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
                 </form>
 
 
@@ -746,8 +826,8 @@
                             <i class="ri-phone-line"></i>
                         </div>
                         <div class="contact__info-wrapper">
-                            <h3 class="contact__title">Call:</h3>
-                            <p class="contact__description">(+57) 3018816875</p>
+                            <h3 class="contact__title">Teléfono:</h3>
+                            <a href="tel:+573209474749" class="contact__description">(+57) 320 947 4749</a>
                         </div>
                     </div>
 
@@ -757,7 +837,27 @@
                         </div>
                         <div class="contact__info-wrapper">
                             <h3 class="contact__title">Correo electrónico:</h3>
-                            <p class="contact__description">luisgerardomancilla3698@gmail.com</p>
+                            <a href="mailto:luisgerardomancilla3698@gmail.com" class="contact__description">luisgerardomancilla3698@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact__info">
+                        <div class="contact__icon">
+                            <i class="ri-linkedin-line"></i>
+                        </div>
+                        <div class="contact__info-wrapper">
+                            <h3 class="contact__title">LinkedIn:</h3>
+                            <a href="https://www.linkedin.com/in/luis-mancilla-750327374/" target="_blank" class="contact__description">luis-mancilla-750327374</a>
+                        </div>
+                    </div>
+
+                    <div class="contact__info">
+                        <div class="contact__icon">
+                            <i class="ri-github-line"></i>
+                        </div>
+                        <div class="contact__info-wrapper">
+                            <h3 class="contact__title">GitHub:</h3>
+                            <a href="https://github.com/luis3698" target="_blank" class="contact__description">github.com/luis3698</a>
                         </div>
                     </div>
 
@@ -766,8 +866,8 @@
                             <i class="ri-map-pin-line"></i>
                         </div>
                         <div class="contact__info-wrapper">
-                            <h3 class="contact__title">Localizacion:</h3>
-                            <p class="contact__description">San Gil, Santander</p>
+                            <h3 class="contact__title">Ubicación:</h3>
+                            <p class="contact__description">San Gil, Santander — Colombia</p>
                         </div>
                     </div>
                 </div>
@@ -775,11 +875,33 @@
         </section>
     </main>
 
+    <!--===================== PDF Viewer Modal =====================-->
+    <div class="pdf-modal" id="pdf-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visor de documento">
+        <div class="pdf-modal__overlay" data-pdf-close></div>
+        <div class="pdf-modal__content">
+            <div class="pdf-modal__header">
+                <h3 class="pdf-modal__title" id="pdf-modal-title">Documento</h3>
+                <button type="button" class="pdf-modal__close" data-pdf-close aria-label="Cerrar visor">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="pdf-modal__body" id="pdf-modal-body">
+                <div class="pdf-modal__pages" id="pdf-modal-pages"></div>
+                <div class="pdf-modal__state" id="pdf-modal-loader">
+                    <span class="pdf-modal__spinner"></span> Cargando documento…
+                </div>
+                <div class="pdf-modal__state pdf-modal__state--error" id="pdf-modal-error" hidden>
+                    <i class="ri-error-warning-line"></i> No se pudo cargar el documento.
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--===================== Footer =====================-->
     <footer class="footer">
         <div class="d-grid footer__wrapper container">
             <div class="footer__content">
-                <h4 class="footer__name">Luis Mancilla</h4>
+                <h4 class="footer__name">Luis Gerardo Mancilla</h4>
                 <ul class="footer__list">
                     <li class="footer__item">
                         <a href="#home" class="footer__link">Hogar</a>
@@ -788,40 +910,44 @@
                         <a href="#about" class="footer__link">Acerca de</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#skills" class="footer__link">Habilidades</a>
+                        <a href="#experience" class="footer__link">Experiencia</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#service" class="footer__link">Servicios</a>
+                        <a href="#skills" class="footer__link">Habilidades</a>
                     </li>
                     <li class="footer__item">
                         <a href="#portfolio" class="footer__link">Portfolio</a>
                     </li>
-                    
                     <li class="footer__item">
                         <a href="#contact" class="footer__link">Contacto</a>
                     </li>
                 </ul>
                 <ul class="social__list">
                     <li class="social__item">
-                        <a href="https://www.facebook.com/61550041767314" target="_blank" class="social__link">
-                            <i class="ri-facebook-fill"></i>
+                        <a href="https://www.linkedin.com/in/luis-gerardo-mancilla-gamboa-750327374/" target="_blank" class="social__link" aria-label="LinkedIn">
+                            <i class="ri-linkedin-fill"></i>
                         </a>
                     </li>
                     <li class="social__item">
-                        <a href="https://www.instagram.com/luis_3698m/" target="_blank" class="social__link">
+                        <a href="https://github.com/luis3698" target="_blank" class="social__link" aria-label="GitHub">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.instagram.com/luis_3698m/" target="_blank" class="social__link" aria-label="Instagram">
                             <i class="ri-instagram-line"></i>
                         </a>
                     </li>
                     <li class="social__item">
-                        <a href="https://www.linkedin.com/in/luis-mancilla-750327374/" target="_blank" class="social__link">
-                            <i class="ri-linkedin-line"></i>
+                        <a href="https://www.facebook.com/61550041767314" target="_blank" class="social__link" aria-label="Facebook">
+                            <i class="ri-facebook-fill"></i>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="footer__copyright container">
-            <p>&copy; Copyright 2024 Darchenco Code. All Rights Reserved</p>
+            <p>&copy; 2026 Luis Gerardo Mancilla. Todos los derechos reservados.</p>
         </div>
     </footer>
     <a href="#" id="scrolltop" class="scrolltop">
@@ -829,6 +955,7 @@
     </a>
 
     <!--=================== SwiperJS  ====================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!--=================== ScrollReveal ==================-->
