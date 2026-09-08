@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 920" width="1920" height="920" role="img" aria-label="GymManager Lite - sistema de gestion de gimnasio">
+  <defs>
+    <style>
+      .f { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .b { font-weight: 600; }
+      .side { fill: #cbd5e1; }
+      .dark { fill: #0f172a; }
+      .mut { fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="920" fill="#eef2f7"/>
+
+  <!-- Barra lateral -->
+  <rect width="300" height="920" fill="#111827"/>
+  <text x="28" y="52" class="f b" font-size="20" fill="#f8fafc">GymManager Lite</text>
+  <line x1="24" y1="74" x2="276" y2="74" stroke="#1f2937"/>
+
+  <rect x="16" y="92" width="268" height="44" rx="10" fill="#2563eb"/>
+  <rect x="28" y="104" width="16" height="20" rx="3" fill="#bfdbfe"/>
+  <text x="52" y="120" class="f b" font-size="15" fill="#fff">Inicio</text>
+
+  <g class="f side" font-size="15">
+    <text x="52" y="172">Registro de usuarios</text>
+    <text x="52" y="216">Inscripción de gym</text>
+    <text x="52" y="260">Venta de productos</text>
+    <text x="52" y="304">Devoluciones</text>
+  </g>
+  <g fill="#334155">
+    <rect x="28" y="156" width="16" height="20" rx="3"/>
+    <rect x="28" y="200" width="16" height="20" rx="3"/>
+    <rect x="28" y="244" width="16" height="20" rx="3"/>
+    <rect x="28" y="288" width="16" height="20" rx="3"/>
+  </g>
+
+  <text x="28" y="348" class="f b" font-size="12" fill="#64748b" letter-spacing="1.5">ADMINISTRACIÓN</text>
+  <g class="f side" font-size="15">
+    <text x="52" y="388">Catálogo de productos</text>
+    <text x="52" y="428">Crear tarifas</text>
+    <text x="52" y="468">Administrar usuarios</text>
+    <text x="52" y="508">Datos del negocio</text>
+    <text x="52" y="548">Copias de seguridad</text>
+    <text x="52" y="588">Migración de datos</text>
+    <text x="52" y="628">Índices corporales</text>
+    <text x="52" y="668">Ventas e ingresos</text>
+    <text x="52" y="708">Control de acceso</text>
+    <text x="52" y="748">Registro de actividad</text>
+    <text x="52" y="788">Información del software</text>
+  </g>
+  <g fill="#334155">
+    <rect x="28" y="372" width="16" height="20" rx="3"/>
+    <rect x="28" y="412" width="16" height="20" rx="3"/>
+    <rect x="28" y="452" width="16" height="20" rx="3"/>
+    <rect x="28" y="492" width="16" height="20" rx="3"/>
+    <rect x="28" y="532" width="16" height="20" rx="3"/>
+    <rect x="28" y="572" width="16" height="20" rx="3"/>
+    <rect x="28" y="612" width="16" height="20" rx="3"/>
+    <rect x="28" y="652" width="16" height="20" rx="3"/>
+    <rect x="28" y="692" width="16" height="20" rx="3"/>
+    <rect x="28" y="732" width="16" height="20" rx="3"/>
+    <rect x="28" y="772" width="16" height="20" rx="3"/>
+  </g>
+  <text x="28" y="844" class="f b" font-size="12" fill="#64748b" letter-spacing="1.5">MI CUENTA</text>
+  <rect x="28" y="868" width="16" height="20" rx="3" fill="#334155"/>
+  <text x="52" y="884" class="f side" font-size="15">Editar perfil</text>
+
+  <!-- Encabezado -->
+  <rect x="300" y="0" width="1620" height="82" fill="#fff"/>
+  <line x1="300" y1="82" x2="1920" y2="82" stroke="#e2e8f0"/>
+  <text x="1200" y="36" class="f b dark" font-size="15" text-anchor="end">Administrador General</text>
+  <text x="1200" y="58" class="f mut" font-size="13" text-anchor="end">Administrador</text>
+  <circle cx="1240" cy="42" r="22" fill="#cbd5e1"/>
+  <circle cx="1240" cy="35" r="8" fill="#94a3b8"/>
+  <path d="M1226 56 a14 12 0 0 1 28 0 z" fill="#94a3b8"/>
+  <rect x="1282" y="22" width="130" height="40" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="1347" y="47" class="f b dark" font-size="14" text-anchor="middle">Cerrar sesión</text>
+
+  <text x="336" y="150" class="f b dark" font-size="34">Hola, Administrador</text>
+  <text x="336" y="182" class="f mut" font-size="15">Resumen general del gimnasio</text>
+
+  <!-- Tarjetas de indicadores -->
+  <g>
+    <rect x="336" y="212" width="252" height="112" rx="12" fill="#fff" stroke="#e2e8f0"/>
+    <text x="360" y="244" class="f mut" font-size="13">Clientes activos</text>
+    <circle cx="378" cy="278" r="16" fill="#dbeafe"/>
+    <text x="410" y="288" class="f b dark" font-size="28">124</text>
+    <text x="360" y="312" class="f mut" font-size="12">de 138 registrados</text>
+
+    <rect x="606" y="212" width="252" height="112" rx="12" fill="#fff" stroke="#e2e8f0"/>
+    <text x="630" y="244" class="f mut" font-size="13">Inscripciones vigentes</text>
+    <circle cx="648" cy="278" r="16" fill="#dcfce7"/>
+    <text x="680" y="288" class="f b dark" font-size="28">98</text>
+    <text x="630" y="312" class="f mut" font-size="12">+12 cliente(s) este mes</text>
+
+    <rect x="876" y="212" width="252" height="112" rx="12" fill="#fff" stroke="#e2e8f0"/>
+    <text x="900" y="244" class="f mut" font-size="13">Por vencer (3 días)</text>
+    <circle cx="918" cy="278" r="16" fill="#fef3c7"/>
+    <text x="950" y="288" class="f b dark" font-size="28">7</text>
+    <text x="900" y="312" class="f mut" font-size="12">9 sin inscripción</text>
+
+    <rect x="1146" y="212" width="252" height="112" rx="12" fill="#fff" stroke="#e2e8f0"/>
+    <text x="1170" y="244" class="f mut" font-size="13">Ingresos del día</text>
+    <circle cx="1188" cy="278" r="16" fill="#fee2e2"/>
+    <text x="1220" y="288" class="f b dark" font-size="28">$486</text>
+    <text x="1170" y="312" class="f mut" font-size="12">mes: $7.940</text>
+  </g>
+
+  <!-- Aviso de inscripciones vencidas -->
+  <rect x="336" y="348" width="1062" height="150" rx="12" fill="#fff" stroke="#e2e8f0"/>
+  <circle cx="356" cy="384" r="8" fill="#ef4444"/>
+  <text x="376" y="390" class="f b dark" font-size="19">Clientes con inscripción vencida</text>
+  <text x="376" y="416" class="f mut" font-size="13">9 cliente(s) sin inscripción vigente. Requieren renovación.</text>
+  <rect x="1224" y="366" width="152" height="40" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="1300" y="391" class="f b dark" font-size="14" text-anchor="middle">Ver en el tablero</text>
+  <line x1="360" y1="444" x2="1374" y2="444" stroke="#f1f5f9"/>
+  <text x="360" y="474" class="f mut" font-size="14">Renueva desde Inscripción de gym para mantener el acceso activo.</text>
+
+  <!-- Gráficas -->
+  <rect x="336" y="522" width="516" height="272" rx="12" fill="#fff" stroke="#e2e8f0"/>
+  <text x="362" y="558" class="f b dark" font-size="17">Clientes registrados por mes</text>
+  <g stroke="#e2e8f0"><line x1="392" y1="620" x2="820" y2="620"/><line x1="392" y1="670" x2="820" y2="670"/><line x1="392" y1="720" x2="820" y2="720"/></g>
+  <polyline points="404,706 460,690 516,700 572,668 628,676 684,640 740,652 796,614" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <g fill="#2563eb"><circle cx="404" cy="706" r="4"/><circle cx="460" cy="690" r="4"/><circle cx="516" cy="700" r="4"/><circle cx="572" cy="668" r="4"/><circle cx="628" cy="676" r="4"/><circle cx="684" cy="640" r="4"/><circle cx="740" cy="652" r="4"/><circle cx="796" cy="614" r="4"/></g>
+  <line x1="392" y1="746" x2="820" y2="746" stroke="#cbd5e1"/>
+  <g class="f mut" font-size="11"><text x="392" y="766">oct</text><text x="504" y="766">dic</text><text x="616" y="766">feb</text><text x="728" y="766">abr</text></g>
+
+  <rect x="882" y="522" width="516" height="272" rx="12" fill="#fff" stroke="#e2e8f0"/>
+  <text x="908" y="558" class="f b dark" font-size="17">Ingresos por mes</text>
+  <text x="1372" y="558" class="f b" font-size="14" fill="#2563eb" text-anchor="end">Mes actual: $7.940</text>
+  <g fill="#93c5fd">
+    <rect x="948" y="668" width="34" height="78" rx="4"/>
+    <rect x="1004" y="646" width="34" height="100" rx="4"/>
+    <rect x="1060" y="686" width="34" height="60" rx="4"/>
+    <rect x="1116" y="622" width="34" height="124" rx="4"/>
+    <rect x="1172" y="656" width="34" height="90" rx="4"/>
+    <rect x="1228" y="606" width="34" height="140" rx="4"/>
+  </g>
+  <rect x="1284" y="586" width="34" height="160" rx="4" fill="#2563eb"/>
+  <line x1="938" y1="746" x2="1366" y2="746" stroke="#cbd5e1"/>
+
+  <!-- Tarjetas inferiores -->
+  <rect x="336" y="818" width="340" height="86" rx="12" fill="#fff" stroke="#e2e8f0"/>
+  <text x="362" y="852" class="f b dark" font-size="15">Ingresos del mes en curso</text>
+  <text x="362" y="880" class="f mut" font-size="13">Inscripciones · Venta de productos</text>
+  <rect x="696" y="818" width="340" height="86" rx="12" fill="#fff" stroke="#e2e8f0"/>
+  <text x="722" y="852" class="f b dark" font-size="15">Productos más vendidos</text>
+  <text x="722" y="880" class="f mut" font-size="13">Proteína · Bebida isotónica · Barra</text>
+  <rect x="1056" y="818" width="342" height="86" rx="12" fill="#fff" stroke="#e2e8f0"/>
+  <text x="1082" y="852" class="f b dark" font-size="15">Stock bajo</text>
+  <text x="1082" y="880" class="f mut" font-size="13">3 productos por debajo del mínimo</text>
+
+  <!-- Panel de control de acceso -->
+  <rect x="1426" y="102" width="470" height="802" rx="14" fill="#0f172a"/>
+  <text x="1456" y="150" class="f b" font-size="24" fill="#f8fafc">Control de acceso</text>
+  <text x="1456" y="180" class="f" font-size="14" fill="#94a3b8">Mire a la cámara para registrar su entrada</text>
+  <text x="1760" y="152" class="f b" font-size="22" fill="#f8fafc" text-anchor="end">15:53</text>
+  <rect x="1782" y="132" width="94" height="26" rx="13" fill="#166534"/>
+  <text x="1829" y="150" class="f b" font-size="12" fill="#dcfce7" text-anchor="middle">En servicio</text>
+
+  <rect x="1456" y="206" width="410" height="300" rx="10" fill="#000" stroke="#1e293b"/>
+  <g fill="none" stroke="#334155" stroke-width="3">
+    <path d="M1546 246 h-30 v30 M1776 246 h30 v30 M1546 466 h-30 v-30 M1776 466 h30 v-30"/>
+  </g>
+  <circle cx="1661" cy="336" r="42" fill="none" stroke="#1e293b" stroke-width="3"/>
+  <text x="1456" y="532" class="f" font-size="12" fill="#64748b">1 cliente(s) con rostro registrado · No se guarda ninguna imagen.</text>
+
+  <rect x="1456" y="558" width="410" height="316" rx="12" fill="#111c31"/>
+  <circle cx="1661" cy="656" r="34" fill="#1e293b"/>
+  <rect x="1653" y="636" width="16" height="24" rx="8" fill="#f59e0b"/>
+  <path d="M1647 668 a14 14 0 0 1 28 0 z" fill="#f59e0b"/>
+  <text x="1661" y="740" class="f b" font-size="26" fill="#f8fafc" text-anchor="middle">Acérquese a la cámara</text>
+  <text x="1661" y="774" class="f" font-size="15" fill="#94a3b8" text-anchor="middle">Su información aparecerá aquí.</text>
+</svg>
