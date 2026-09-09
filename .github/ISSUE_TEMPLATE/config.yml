@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Escribirme directamente
+    url: https://luis3698.github.io/responsive-personal-portfolio/#contact
+    about: Si quieres contactarme por trabajo, una colaboración o una pregunta que no es sobre el código del sitio.
+  - name: Reportar un problema de seguridad
+    url: https://github.com/luis3698/responsive-personal-portfolio/blob/main/SECURITY.md
+    about: No abras una incidencia pública. Aquí te explico cómo reportarlo en privado.

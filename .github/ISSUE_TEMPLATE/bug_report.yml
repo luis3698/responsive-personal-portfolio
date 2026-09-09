@@ -1,0 +1,95 @@
+name: Reporte de error
+description: Algo no funciona o no se ve como debería
+title: "[Error]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por tomarte el tiempo de reportarlo. Entre más concreto seas,
+        más rápido lo puedo arreglar.
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: ¿Qué pasó?
+      description: Describe el problema en una o dos frases.
+      placeholder: El botón "Descargar CV" abre una página en blanco.
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      placeholder: |
+        1. Entro a la página
+        2. Bajo hasta la sección Portfolio
+        3. Paso el mouse sobre la tarjeta de SIGR
+        4. Hago clic en "Ver manual"
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué esperabas que pasara?
+      placeholder: Que se abriera el visor con el manual en PDF.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dispositivo
+    attributes:
+      label: ¿Dónde lo viste?
+      options:
+        - Computador de escritorio o portátil
+        - Tablet
+        - Teléfono
+    validations:
+      required: true
+
+  - type: input
+    id: navegador
+    attributes:
+      label: Navegador y versión
+      placeholder: Chrome 131, Firefox 133, Safari 18...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tema
+    attributes:
+      label: ¿Con qué tema?
+      options:
+        - Claro
+        - Oscuro
+        - En ambos
+        - No aplica
+    validations:
+      required: false
+
+  - type: textarea
+    id: capturas
+    attributes:
+      label: Capturas
+      description: Si el problema se ve, una imagen vale más que la descripción. Arrastra el archivo a este campo.
+    validations:
+      required: false
+
+  - type: textarea
+    id: consola
+    attributes:
+      label: Errores de consola
+      description: Abre las herramientas de desarrollo con F12, ve a la pestaña Console y pega aquí lo que aparezca en rojo.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: codigo-de-conducta
+    attributes:
+      label: Código de conducta
+      options:
+        - label: He leído y acepto el [código de conducta](https://github.com/luis3698/responsive-personal-portfolio/blob/main/CODE_OF_CONDUCT.md) del proyecto.
+          required: true

@@ -1,0 +1,81 @@
+name: Sugerencia de mejora
+description: Proponer un cambio o una función nueva
+title: "[Mejora]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Este es un portafolio personal, así que hay cambios de diseño o de
+        contenido que prefiero mantener como están. Cuéntame tu idea y la
+        conversamos antes de que inviertas tiempo en programarla.
+
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: ¿Qué propones?
+      description: Describe la mejora en una o dos frases.
+      placeholder: Agregar un botón para copiar el correo de contacto al portapapeles.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivo
+    attributes:
+      label: ¿Qué problema resuelve?
+      description: Cuéntame qué te llevó a proponerlo. Si es algo que te estorbó al usar el sitio, descríbelo.
+      placeholder: En el teléfono es incómodo seleccionar el correo para copiarlo a mano.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: ¿Qué parte del sitio afecta?
+      options:
+        - Inicio
+        - Acerca de
+        - Experiencia
+        - Habilidades
+        - Servicios
+        - Portfolio
+        - Certificaciones
+        - Contacto
+        - Navegación o pie de página
+        - Accesibilidad
+        - Rendimiento
+        - Otra
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: ¿Consideraste otras opciones?
+      description: Si pensaste en más de una forma de resolverlo, cuéntame cuáles descartaste y por qué.
+    validations:
+      required: false
+
+  - type: textarea
+    id: referencias
+    attributes:
+      label: Referencias
+      description: Enlaces o capturas de sitios donde hayas visto algo parecido.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: ayuda
+    attributes:
+      label: ¿Te gustaría implementarlo?
+      options:
+        - label: Estoy dispuesto a abrir un pull request con este cambio.
+          required: false
+
+  - type: checkboxes
+    id: codigo-de-conducta
+    attributes:
+      label: Código de conducta
+      options:
+        - label: He leído y acepto el [código de conducta](https://github.com/luis3698/responsive-personal-portfolio/blob/main/CODE_OF_CONDUCT.md) del proyecto.
+          required: true
