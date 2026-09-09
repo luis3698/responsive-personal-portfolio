@@ -11,7 +11,6 @@ Desktop.ini
 *.swp
 
 # Herramientas locales
-.claude/
 _site/
 .jekyll-cache/
 
