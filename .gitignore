@@ -1,0 +1,20 @@
+# Sistema operativo
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+
+# Herramientas locales
+.claude/
+_site/
+.jekyll-cache/
+
+# Registros y temporales
+*.log
+*.tmp
