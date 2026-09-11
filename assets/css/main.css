@@ -1,5 +1,5 @@
 :root {
-  /* Colors
+  /* Paleta base — no cambia con el tema
   ___________________*/
   --color-primary: #7a49fe;
   --color-primary-dark: #7016ff;
@@ -11,8 +11,30 @@
   --color-gray-light: #b8bbc7;
   --color-gray-lighten: #f6f8fe;
   --color-white: #fff;
+
+  /* Morado legible sobre fondo oscuro. El #7a49fe solo alcanza 2.99:1 contra
+     el #212736, asi que los elementos que siempre viven sobre oscuro —el pie
+     de pagina— usan este.
+  ___________________*/
+  --color-accent-on-dark: #a78bfa;
+
+  /* Chips que van encima de las imagenes de proyecto: se mantienen claros en
+     los dos temas, porque el fondo que tienen debajo siempre es oscuro.
+  ___________________*/
+  --color-chip: #fff;
+  --color-on-chip: #3f396d;
+  --color-logo-tile: #f4f6fc;
+
+  /* Colores con significado — estos SI cambian en .dark-theme
+  ___________________*/
+  --color-bg: #fff;
+  --color-surface: #fff;
+  --color-surface-2: #f6f8fe;
   --color-title: #3f396d;
-  --color-border: #2b3142;
+  --color-text: #5c5c63;
+  --color-text-soft: #6e6e78;
+  --color-accent: #6c2bf5;
+  --color-border: #e4e8f4;
 
   /* Font & Typography
   ___________________*/
@@ -107,7 +129,7 @@ button {
 
 a {
   text-decoration: none;
-  color: var(--color-gray);
+  color: var(--color-text);
 }
 
 main {
@@ -115,67 +137,45 @@ main {
 }
 
 body {
+  background-color: var(--color-bg);
   font-family: var(--font-family-primary);
   font-size: var(--fs-md);
   font-weight: var(--fw-regular);
-  color: var(--color-gray);
+  color: var(--color-text);
   margin-top: var(--height-header);
 }
 
-/* Dark Theme 
+/* Dark Theme
 --------------------------------------------------------------*/
+/* El tema oscuro solo redefine los colores con significado. Todo lo que use
+   --color-surface, --color-text, --color-accent y compania se adapta solo,
+   sin necesidad de una regla .dark-theme por componente. */
 .dark-theme {
-  background-color: var(--color-secondary);
-  color: var(--color-gray-light);
+  --color-bg: #212736;
+  --color-surface: #2b3244;
+  --color-surface-2: #1a1f2b;
   --color-title: #fff;
-  --shadow-header: 0px 5px 10px rgba(0, 0, 0, 0.09);
-}
+  --color-text: #c3c8d6;
+  --color-text-soft: #a2a9bb;
+  --color-accent: #a78bfa;
+  --color-border: #3a4258;
 
-.dark-theme .header,
-.dark-theme .nav__menu {
-  background-color: var(--color-secondary);
-}
-
-.dark-theme .section-bg {
-  background-color: var(--color-secondary-dark);
-}
-
-.dark-theme .nav__menu {
-  border-color: var(--color-secondary-dark);
+  --shadow-primary: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-secondary: 0 30px 60px 2px rgba(0, 0, 0, 0.45);
+  --shadow-header: 0px 5px 10px rgba(0, 0, 0, 0.35);
 }
 
 .dark-theme .social__link {
-  background-color: var(--color-secondary-dark);
+  background-color: var(--color-surface);
   color: var(--color-title);
 }
 
-.dark-theme .skills__card,
-.dark-theme .service__card,
-.dark-theme .blog__post,
-.dark-theme .testimonial__card,
-.dark-theme .form__input {
-  background-color: var(--color-secondary);
-  box-shadow: none;
-}
-
-.dark-theme .service__icon {
-  background-color: var(--color-secondary-dark);
-}
-
-.dark-theme .blog__post {
-  background-color: var(--color-secondary-dark);
-}
-
-.dark-theme .form__input::placeholder {
-  opacity: 0.3;
-}
-
 .dark-theme::-webkit-scrollbar {
-  background-color: var(--color-gray);
+  background-color: var(--color-surface-2);
 }
 
 .dark-theme::-webkit-scrollbar-thumb {
-  background-color: var(--color-gray-light);
+  background-color: var(--color-text-soft);
 }
 
 /* Reausable CSS Classes
@@ -191,7 +191,7 @@ body {
 }
 
 .section-bg {
-  background-color: var(--color-gray-lighten);
+  background-color: var(--color-surface-2);
 }
 
 .section__header {
@@ -209,7 +209,7 @@ body {
 .section__subtitle {
   font-weight: var(--fw-bold);
   font-size: var(--fs-md);
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .d-grid {
@@ -243,7 +243,7 @@ body {
 /* Header
 --------------------------------------------------------------*/
 .header {
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   box-shadow: var(--shadow-header);
   position: fixed;
   top: 0;
@@ -284,7 +284,7 @@ body {
 
 .theme__toggle:hover,
 .nav__toggle:hover {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .nav__link {
@@ -293,14 +293,14 @@ body {
 }
 
 .nav__link:hover {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 /* Mobile menu */
 @media screen and (max-width: 968px) {
   .nav__menu {
-    background-color: var(--color-white);
-    border-top: 0.2rem solid var(--color-gray-lighten);
+    background-color: var(--color-surface);
+    border-top: 0.2rem solid var(--color-border);
     position: fixed;
     right: -100%;
     bottom: 0;
@@ -385,7 +385,7 @@ body {
 }
 
 .social__link {
-  background-color: var(--color-gray-lighten);
+  background-color: var(--color-surface-2);
   width: 4.5rem;
   height: 4.5rem;
   font-size: 2rem;
@@ -428,7 +428,7 @@ body {
 /* Profile photo frame (Home & About)
 --------------------------------------------------------------*/
 .home__role {
-  color: var(--color-primary);
+  color: var(--color-accent);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-md);
   margin-top: -1rem;
@@ -444,8 +444,8 @@ body {
 
 .btn--outline {
   background-color: transparent;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
 }
 
 .btn--outline:hover {
@@ -481,7 +481,7 @@ body {
   object-position: top center;
   border-radius: 2rem;
   box-shadow: var(--shadow-secondary);
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
 }
 
 /* Experience (timeline)
@@ -523,15 +523,11 @@ body {
   color: var(--color-white);
   font-size: 2rem;
   z-index: 1;
-  box-shadow: 0 0 0 6px var(--color-gray-lighten);
-}
-
-.dark-theme .experience__dot {
-  box-shadow: 0 0 0 6px var(--color-secondary-dark);
+  box-shadow: 0 0 0 6px var(--color-surface-2);
 }
 
 .experience__card {
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   border-radius: var(--b-radius);
   padding: 2.5rem;
   box-shadow: var(--shadow-primary);
@@ -547,7 +543,7 @@ body {
   display: inline-block;
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
-  color: var(--color-primary);
+  color: var(--color-accent);
   margin-bottom: 0.5rem;
 }
 
@@ -558,7 +554,7 @@ body {
 
 .experience__company {
   display: block;
-  color: var(--color-gray);
+  color: var(--color-text);
   font-weight: var(--fw-medium);
   margin-bottom: 1.2rem;
 }
@@ -566,7 +562,7 @@ body {
 .experience__list {
   display: grid;
   gap: 0.6rem;
-  color: var(--color-gray);
+  color: var(--color-text);
 }
 
 .experience__list li {
@@ -596,7 +592,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   border-radius: var(--b-radius);
   padding: 3rem 2.5rem;
   text-align: center;
@@ -614,7 +610,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  color: var(--color-primary);
+  color: var(--color-accent);
   font-weight: var(--fw-medium);
   font-size: var(--fs-sm);
 }
@@ -623,14 +619,6 @@ body {
   flex: 1;
 }
 
-.dark-theme .education__card {
-  background-color: var(--color-secondary);
-  box-shadow: none;
-}
-
-.dark-theme .education__title {
-  color: var(--color-white);
-}
 
 .education__icon {
   width: 6rem;
@@ -651,18 +639,18 @@ body {
 }
 
 .education__place {
-  color: var(--color-gray);
+  color: var(--color-text);
   font-weight: var(--fw-medium);
 }
 
 .education__languages {
   text-align: center;
   margin-top: 3rem;
-  color: var(--color-gray);
+  color: var(--color-text);
 }
 
 .education__languages i {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 /* Skills
@@ -689,7 +677,7 @@ body {
 }
 
 .skills__card {
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   display: grid;
   gap: 2rem;
   justify-content: center;
@@ -705,10 +693,15 @@ body {
   transform: scale(1.1);
 }
 
+/* Los logos son SVG de marca con color fijo: no se pueden recolorear por CSS.
+   GitHub (#2b414d) y Vue (#35495e) quedan en 1.4:1 y 1.6:1 contra el fondo
+   oscuro, o sea invisibles. Por eso el circulo se mantiene claro en los dos
+   temas, que es el fondo para el que esos logos fueron disenados. */
 .skills__img-wrapper {
   justify-self: center;
   width: 5rem;
   height: 5rem;
+  background-color: var(--color-logo-tile);
   border: 1px solid var(--color-primary);
   border-radius: 50%;
   display: flex;
@@ -729,7 +722,7 @@ body {
 }
 
 .skills__card:hover .skills__name {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 /* Counter
@@ -779,7 +772,7 @@ body {
 }
 
 .service__card {
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   box-shadow: var(--shadow-primary);
   width: 100%;
   max-width: 60rem;
@@ -797,7 +790,7 @@ body {
 }
 
 .service__icon {
-  background-color: var(--color-gray-lighten);
+  background-color: var(--color-surface-2);
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
@@ -859,8 +852,8 @@ body {
   right: -100%;
   width: 5rem;
   height: 5rem;
-  background-color: var(--color-white);
-  color: var(--color-title);
+  background-color: var(--color-chip);
+  color: var(--color-on-chip);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -900,7 +893,7 @@ body {
 /* certifications
 --------------------------------------------------------------*/
 .testimonial__card {
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   box-shadow: var(--shadow-primary);
   width: 100%;
   max-width: 40rem;
@@ -929,7 +922,7 @@ body {
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
-  border: 0.1rem solid var(--color-primary);
+  border: 0.1rem solid var(--color-accent);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -981,7 +974,7 @@ body {
   width: 30rem;
   max-width: 85vw;
   height: auto;
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   border-radius: var(--b-radius);
   box-shadow: var(--shadow-primary);
   padding: 2.5rem;
@@ -1012,7 +1005,7 @@ body {
 }
 
 .cert__meta {
-  color: var(--color-gray);
+  color: var(--color-text);
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
 }
@@ -1023,24 +1016,16 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  color: var(--color-primary);
+  color: var(--color-accent);
   font-weight: var(--fw-medium);
   font-size: var(--fs-sm);
 }
 
-.dark-theme .cert__card {
-  background-color: var(--color-secondary);
-  box-shadow: none;
-}
-
-.dark-theme .cert__title {
-  color: var(--color-white);
-}
 
 /* Blog
 --------------------------------------------------------------*/
 .blog__post {
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   box-shadow: var(--shadow-primary);
   width: 100%;
   max-width: 35rem;
@@ -1058,7 +1043,7 @@ body {
   top: 2rem;
   left: 2rem;
   background-color: var(--color-primary-lighten);
-  color: var(--color-primary);
+  color: var(--color-accent);
   font-weight: var(--fw-medium);
   font-size: var(--fs-sm);
   padding: 1rem;
@@ -1089,7 +1074,7 @@ body {
   font-size: var(--fs-sm);
   text-transform: uppercase;
   font-weight: var(--fw-medium);
-  color: var(--color-primary);
+  color: var(--color-accent);
   transition: var(--transition);
 }
 
@@ -1118,22 +1103,22 @@ body {
 }
 
 .form__input {
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   box-shadow: var(--shadow-primary);
   border: 0.1rem solid transparent;
   width: 100%;
   padding: 1.8rem 2.5rem;
   border-radius: var(--b-radius);
-  color: var(--color-gray);
+  color: var(--color-text);
   transition: var(--transition);
 }
 
 .form__input::placeholder {
-  color: var(--color-gray-light);
+  color: var(--color-text-soft);
 }
 
 .form__input:focus {
-  border-color: var(--color-primary);
+  border-color: var(--color-accent);
 }
 
 .form__textarea {
@@ -1216,7 +1201,7 @@ body {
 }
 
 .footer__link:hover {
-  color: var(--color-primary);
+  color: var(--color-accent-on-dark);
 }
 
 .footer__content .social__link {
@@ -1390,7 +1375,7 @@ body {
   }
 
   .nav__link--active {
-    color: var(--color-primary);
+    color: var(--color-accent);
   }
 
   .nav__link--active::before {
@@ -1434,8 +1419,8 @@ body {
   border: none;
   cursor: pointer;
   border-radius: var(--b-radius);
-  background-color: var(--color-white);
-  color: var(--color-title);
+  background-color: var(--color-chip);
+  color: var(--color-on-chip);
   font-family: inherit;
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
@@ -1486,7 +1471,7 @@ body {
   width: 100%;
   max-width: 90rem;
   height: 90vh;
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   border-radius: var(--b-radius);
   overflow: hidden;
   box-shadow: var(--shadow-secondary);
@@ -1601,9 +1586,6 @@ body {
   }
 }
 
-.dark-theme .pdf-modal__content {
-  background-color: var(--color-secondary);
-}
 
 @media screen and (max-width: 768px) {
   .pdf-modal {
